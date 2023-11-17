@@ -1,5 +1,6 @@
 <template>
   <section>
+    <product-sorting></product-sorting>
     <product-item
       v-for="product in productsArray"
       :key="product.id"
@@ -14,21 +15,23 @@
 
 <script>
 import ProductItem from "../components/product/ProductItem.vue";
+import ProductSorting from "../components/product/ProductSorting.vue";
 
 export default {
   components: {
     ProductItem,
+    ProductSorting,
   },
   computed: {
     productsArray() {
-      return this.$store.getters['products/products'];
+      return this.$store.getters["products/products"];
     },
   },
 };
 </script>
 
 <style scoped>
-section{
+section {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;

@@ -7,7 +7,8 @@ export default {
     namespaced: true,
     state() {
         return {
-            products: productsData.products.data.items
+            products: productsData.products.data.items,
+            filteredProducts: productsData.products.data.items
         }
     },
     mutations,

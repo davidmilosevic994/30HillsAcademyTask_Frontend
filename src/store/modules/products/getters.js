@@ -1,5 +1,5 @@
 export default {
-    products(state) {
-        return state.products;
-    }
-}
+  products(state) {
+    return state.filteredProducts;
+  },
+};
